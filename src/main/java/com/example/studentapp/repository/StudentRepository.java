@@ -18,12 +18,13 @@ public class StudentRepository {
         return students;
     }
 
-    public void deleteById(int id){
+    public boolean deleteById(int id){
         Student s = searchById(id);
         if(s!=null) {
             students.remove(s);
+            return true;
         }else{
-            System.out.println("student not found");
+            return false;
         }
     }
 

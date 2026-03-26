@@ -26,8 +26,9 @@ public class StudentService {
     }
 
     public String delete(int id){
-        repo.deleteById(id);
-        return "deleted - "+id;
+        boolean isDeleted = repo.deleteById(id);
+
+        return (isDeleted)?"deleted - "+id:"student not found";
     }
 
     public Student search(int id){
