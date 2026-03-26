@@ -1,4 +1,5 @@
 import com.example.studentapp.config.StudentConfig;
+import com.example.studentapp.model.Student;
 import com.example.studentapp.service.StudentService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -39,7 +40,10 @@ public class StudentappApplication {
 						System.out.print("Enter id: ");
 						id = sc.nextInt();
 						sc.nextLine();
-						System.out.println(service.search(id));
+						Student s = service.search(id);
+						if(s!=null) {
+							System.out.println(s);
+						}
 						break;
 
 					default: num = -1;
