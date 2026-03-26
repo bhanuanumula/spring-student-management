@@ -13,10 +13,11 @@ public class StudentappApplication {
 
 		StudentService service = context.getBean(StudentService.class);
 		Scanner sc = new Scanner(System.in);
+		System.out.println("==== Student Management System ====");
 
 		int num = 0;
-		while(num!=-1){
-			System.out.println("\n1. Add a student \n2. View students\n3. Delete Student\n4. search student");
+		while(num!=5){
+			System.out.println("\n1. Add a student \n2. View students\n3. Delete Student\n4. search student\n5. Exit");
 			System.out.print("choose an option: ");
 			num = sc.nextInt();
 			sc.nextLine();
@@ -46,7 +47,7 @@ public class StudentappApplication {
 						}
 						break;
 
-					default: num = -1;
+					default: num = 5;
 					break;
 				}
 
