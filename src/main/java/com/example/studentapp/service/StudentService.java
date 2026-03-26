@@ -13,7 +13,6 @@ public class StudentService {
 
     @Autowired
     public StudentService(StudentRepository repo){
-        System.out.println("in constructor: "+getClass().getSimpleName());
         this.repo = repo;
     }
 

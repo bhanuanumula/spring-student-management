@@ -10,13 +10,11 @@ public class StudentConfig {
 
     @Bean
     public StudentRepository repository(){
-        System.out.println("bean : initialized in repo");
         return new StudentRepository();
     }
 
     @Bean
     public StudentService studentService(StudentRepository studentRepository){
-        System.out.println("bean : initialized in service");
         return new StudentService(studentRepository);
     }
 }
